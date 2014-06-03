@@ -1,0 +1,70 @@
+% Ajustes para os padrões da Anhanguera Educacional
+% Por Henrique Aparecido Lavezzo  (Rynaro)
+\renewcommand{\imprimircapa}{
+  \begin{capa}
+    \begin{center}
+      \ABNTEXchapterfont\large\imprimirinstituicao
+      \vfill
+      \ABNTEXchapterfont\large\imprimirtitulo
+      \par
+      \vspace*{2cm}
+      \ABNTEXchapterfont\large\imprimirautor
+      \vfill
+      \ABNTEXchapterfont\large\imprimirlocal
+      \par
+      \ABNTEXchapterfont\large\imprimirdata
+      \vspace*{1cm}
+    \end{center}
+  \end{capa}
+}
+
+\renewcommand{\folhaderostocontent}{
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    
+    \vspace*{\fill}
+    
+    \ABNTEXchapterfont\large\imprimirtitulo
+    
+    \vspace*{1cm}
+    
+    \abntex@ifnotempty{\imprimirpreambulo}{
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+	\SingleSpacing
+	\normalsize \imprimirpreambulo
+      \end{minipage}
+      \vspace*{1cm}
+      
+    }
+    
+    \large\imprimirorientadorRotulo~\imprimirorientador
+    
+    \abntex@ifnotempty{\imprimircoorientador}{
+      {\large\imprimircoorientadorRotulo~\imprimircoorientador}
+    }
+
+    \vspace*{\fill}    
+    
+  \end{center}
+
+  \textbf{\large\imprimirlocal, \large\imprimirdata}
+  
+  \vspace*{1cm}
+  
+  \begin{center}
+    \textbf{BANCA EXAMINADORA}    
+    \assinatura{\textbf{\imprimirorientador}\\ \imprimirinstituicao}
+    
+    \vspace*{1cm}
+    
+    \abntex@ifnotempty{\imprimircoorientador}{
+     \assinatura{\textbf{{\imprimircoorientador}}}
+    }
+    
+    \vspace*{\fill}
+    
+  \end{center}
+
+
+}
